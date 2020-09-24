@@ -43,17 +43,17 @@ function Drawer({ open, setOpen, history }) {
     {
       text: "Squat",
       icon: <FitnessCenter />,
-      onClick: () => history.push("/squat"),
+      onClick: () => history.push("/dashboard/squat"),
     },
     {
       text: "Bench",
       icon: <FitnessCenter />,
-      onClick: () => history.push("/bench"),
+      onClick: () => history.push("/dashboard/squat"),
     },
     {
       text: "Deadlift",
       icon: <FitnessCenter />,
-      onClick: () => history.push("/deadlift"),
+      onClick: () => history.push("/dashboard/squat"),
     },
   ];
 
@@ -82,8 +82,25 @@ function Drawer({ open, setOpen, history }) {
       </div>
       <Divider />
       <List>
-        <ListItem button key={"Workout"}>
-          <ListItemText primary={"Workout"} />
+        <ListItem
+          button
+          key={"Home"}
+          onClick={() => {
+            history.push("/");
+            history.go();
+          }}
+        >
+          <ListItemText primary={"Home"} />
+        </ListItem>
+        <ListItem
+          button
+          key={"Add a Workout!"}
+          onClick={() => {
+            history.push("/create");
+            history.go();
+          }}
+        >
+          <ListItemText primary={"Add a Workout!"} />
         </ListItem>
       </List>
       <Divider />

@@ -5,11 +5,11 @@ import ExercisePage from "./components/ExerciseLayout/ExercisePage.jsx";
 
 function App() {
   return (
-    <BrowserRouter basename="/dashboard">
+    <BrowserRouter>
       <Switch>
         <Route
           exact
-          from="/"
+          from="/dashboard"
           render={(props) => (
             <BasePage {...props}>
               <div>There's nothing here. Navigate to an exercise page.</div>
@@ -18,7 +18,7 @@ function App() {
         />
         <Route
           exact
-          from="/squat"
+          from="/dashboard/squat"
           render={(props) => (
             <BasePage {...props}>
               <ExercisePage exercise={"squat"}></ExercisePage>
@@ -27,7 +27,7 @@ function App() {
         />
         <Route
           exact
-          from="/bench"
+          from="/dashboard/bench"
           render={(props) => (
             <BasePage {...props}>
               <ExercisePage exercise={"bench"}></ExercisePage>
@@ -36,7 +36,7 @@ function App() {
         />
         <Route
           exact
-          from="/deadlift"
+          from="/dashboard/deadlift"
           render={(props) => (
             <BasePage {...props}>
               <ExercisePage exercise={"deadlift"}></ExercisePage>
