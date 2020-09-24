@@ -5,7 +5,7 @@ import ExercisePage from "./components/ExerciseLayout/ExercisePage.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/dashboard">
       <Switch>
         <Route
           exact
