@@ -48,12 +48,12 @@ function Drawer({ open, setOpen, history }) {
     {
       text: "Bench",
       icon: <FitnessCenter />,
-      onClick: () => history.push("/dashboard/squat"),
+      onClick: () => history.push("/dashboard/bench"),
     },
     {
       text: "Deadlift",
       icon: <FitnessCenter />,
-      onClick: () => history.push("/dashboard/squat"),
+      onClick: () => history.push("/dashboard/deadlift"),
     },
   ];
 
