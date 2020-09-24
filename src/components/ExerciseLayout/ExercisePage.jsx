@@ -34,13 +34,13 @@ export default function ExercisePage({ exercise }) {
   useEffect(() => {
     async function fetchExerciseData() {
       const workoutJSON = await fetchData({
-        url: `http://${window.location.hostname}:8080/api/sets`,
+        url: `/api/sets`,
         date: date,
         exercise: exercise,
       });
 
       const prJSON = await fetchData({
-        url: `http://${window.location.hostname}:8080/api/prs`,
+        url: `/api/prs`,
         date: date,
         exercise: exercise,
       });
