@@ -10,6 +10,7 @@ import drawerWidth from "./constants";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
+    background: "#343a40",
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -57,7 +58,7 @@ export default function Menu({ open, setOpen }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            B3
+            Swole Meter
           </Typography>
         </Toolbar>
       </AppBar>
